@@ -1,0 +1,18 @@
+{
+    "name": "ML Info Lateral",
+    "version": "1.0",
+    "description": "Exibe informações de um produto do Mercado Livre em um modal lateral.",
+    "manifest_version": 3,
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.mercadolivre.com.br/*", "*://*.mercadolibre.com/*"],
+        "js": ["content_script.js"],
+        "css": ["content_styles.css"]
+      }
+    ]
+  }
+  
